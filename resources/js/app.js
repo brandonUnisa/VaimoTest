@@ -1,13 +1,10 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Popover from 'vue-js-popover'
-import VueMaterial from 'vue-material'
-import 'vue-material/dist/vue-material.min.css'
-import 'vue-material/dist/theme/default.css'
+import VueBlu from 'vue-blu'
+import 'vue-blu/dist/css/vue-blu.min.css'
 
 Vue.use(VueRouter);
-Vue.use(VueMaterial);
-Vue.use(Popover);
+Vue.use(VueBlu);
 
 const router = new VueRouter({
     mode: 'history',

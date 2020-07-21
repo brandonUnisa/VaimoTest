@@ -1,5 +1,5 @@
 <!doctype html>
-<html xmlns:v-popover="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,24 +8,53 @@
         <link rel="stylesheet" href="dist/app.css" />
     </head>
     <body>
-        <div class="blue-banner-top">
-        </div>
         <div id="app">
-            <div class="md-layout">
-                <div class="md-layout-item">
-                    <img src="img/LogoMain.png" class="logo" alt="Vaimo Store">
+            <div class="blue-banner-top"></div>
+            <dropdown>
+                <a class="button">
+                    <span>WOMEN</span>
+                </a>
+                <div slot="content">
+                    <menus>
+                        <menu-item>
+                            <span>2014</span>
+                            <menus slot="sub" type="float">
+                                <menu-item>SUMMER</menu-item>
+                                <menu-item>AUTUMN</menu-item>
+                                <menu-item>WINTER</menu-item>
+                                <menu-item>SPRING</menu-item>
+                            </menus>
+                        </menu-item>
+                        <menu-item>
+                            <span>2013</span>
+                            <menus slot="sub" type="float">
+                                <menu-item>SUMMER</menu-item>
+                                <menu-item>AUTUMN</menu-item>
+                                <menu-item>WINTER</menu-item>
+                                <menu-item>SPRING</menu-item>
+                            </menus>
+                        </menu-item>
+                        <menu-item>
+                            <span>2012</span>
+                            <menus slot="sub" type="float">
+                                <menu-item>SUMMER</menu-item>
+                                <menu-item>AUTUMN</menu-item>
+                                <menu-item>WINTER</menu-item>
+                                <menu-item>SPRING</menu-item>
+                            </menus>
+                        </menu-item>
+                        <menu-item>
+                            <span>2011</span>
+                            <menus slot="sub" type="float">
+                                <menu-item>SUMMER</menu-item>
+                                <menu-item>AUTUMN</menu-item>
+                                <menu-item>WINTER</menu-item>
+                                <menu-item>SPRING</menu-item>
+                            </menus>
+                        </menu-item>
+                    </menus>
                 </div>
-                <div class="md-layout-item"></div>
-                <div class="md-layout-item">
-                    <button v-popover:shopping-cart class="shopping-cart-container">Toggle popover</button>
-                    <popover name="shopping-cart">
-                        Hello
-                    </popover>
-                </div>
-            </div>
-            <div class="md-layout">
-                
-            </div>
+            </dropdown>
         </div>
         <script src="dist/app.js"></script>
     </body>
