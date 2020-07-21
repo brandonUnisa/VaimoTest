@@ -22,5 +22,8 @@
     "vue-loader": "^12.1.0",
     "vue-template-compiler": "^2.5.16"
   },
-  "dependencies": {}
+  "dependencies": {
+    "vue-js-popover": "^1.2.1",
+    "vue-material": "^1.0.0-beta-14"
+  }
 }

@@ -1,18 +1,18 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import Popover from 'vue-js-popover'
+import VueMaterial from 'vue-material'
+import 'vue-material/dist/vue-material.min.css'
+import 'vue-material/dist/theme/default.css'
 
 Vue.use(VueRouter);
-
-const Foo = {template: '<div>foo</div>'}
-const Bar = {template: '<div>bar</div>'}
+Vue.use(VueMaterial);
+Vue.use(Popover);
 
 const router = new VueRouter({
     mode: 'history',
     base: '/',
-    routes: [
-        {path: '/foo', component: Foo},
-        {path: '/bar', component: Bar}
-    ]
+    routes: []
 });
 
 new Vue({
