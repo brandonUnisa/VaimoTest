@@ -109,3 +109,60 @@ h3 {
   border-color: #b5c2ca !important;
   color: black !important;
 }
+
+.strikethrough {
+  border-bottom: 2px solid black;
+  padding-top: 14px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.col-2-custom {
+  display: inline-block;
+  padding: 0px;
+  width: 49%;
+}
+
+.grey-border {
+  border: 1px solid #c8d3d5;
+}
+
+.strikethrough-text {
+  text-decoration: line-through;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.footer {
+  background-color: #888f93;
+}
+
+.cart-image {
+  height: 60px;
+  width: 60px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.inline-container {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.item-details {
+  width: 85%;
+}
+
+.extra-margin-bottom {
+  margin-bottom: 10px;
+}

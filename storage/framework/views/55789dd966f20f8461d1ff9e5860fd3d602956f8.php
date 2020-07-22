@@ -1,3 +1,18 @@
+<?php
+    use \App\Http\Controllers\CartController;
+    $res = ((new CartController)->get());
+    $cart = json_decode($res->getContent());
+
+    function titleSort($a, $b) {
+        $a = $a['title'];
+        $b = $b['title'];
+        if ($a == $b)
+            return 0;
+        return ($a > $b) ? 1 : -1;
+    }
+    usort($products, "titleSort");
+?>
+
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -17,7 +32,7 @@
                     <img src="img/Logo_Transparent.png" class="logo" alt="Vaimo Store">
                 </div>
                 <div class="column is-6 align-right">
-                    <popover :width="500">
+                    <popover :width="300" trigger="click">
                         <button class="button">
                             <span class="no-left-margin icon">
                                 <i class="fa fa-shopping-cart"></i>
@@ -30,7 +45,26 @@
                             </span>
                         </button>
                         <div slot="content">
-                            <p>Test</p>
+                            <?php foreach($cart->items as $item): ?>
+                                <div class="columns">
+                                    <img class="cart-image" src="<?php echo e($item->imgSrc); ?>" alt="<?php echo e($item->name); ?>">
+                                    <div class="w-100">
+                                        <div class="inline-container item-details">
+                                            <div>
+                                                <?php echo e($item->name); ?>
+
+                                            </div>
+                                            <div>
+                                                <?php echo e($item->qty); ?> x € <?php echo e($item->price); ?>
+
+                                            </div>
+                                        </div>
+                                        <div class="inline-container">
+                                            <i class="fa fa-times"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
                         </div>
                     </popover>
                 </div>
@@ -342,6 +376,99 @@
                             fix of the freshest style, celebrity and music news.
                         </h4>
                     </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column is-1">
+                    <p class="strikethrough"></p>
+                </div>
+                <div class="column is-3">
+                    <h2>OUR FAVOURITES</h2>
+                </div>
+                <div class="column is-8">
+                    <p class="strikethrough"></p>
+                </div>
+            </div>
+            <div class="columns">
+                <?php foreach($products as $product): ?>
+                    <div class="column is-3-desktop">
+                        <div>
+                            <img src="<?php echo e($product['image']); ?>" class="grey-border" alt="<?php echo e($product['title']); ?>">
+                            <h5 class="uppercase align-center">
+                                <?php echo e($product['title']); ?>
+
+                            </h5>
+                            <?php if(strlen($product['specialPrice']) == 0): ?>
+                                <div>
+                                    <h5 class="align-center">
+                                        € <?php echo e($product['price']); ?>
+
+                                    </h5>
+                                </div>
+                            <?php endif; ?>
+                            <?php if(strlen($product['specialPrice']) != 0): ?>
+                                <div>
+                                    <h5 class="align-right col-2-custom strikethrough-text">
+                                        € <?php echo e($product['price']); ?>
+
+                                    </h5>
+                                    <h5 class="align-left col-2-custom red-color">
+                                        € <?php echo e($product['specialPrice']); ?>
+
+                                    </h5>
+                                </div>
+                            <?php endif; ?>
+                            <div class="align-center">
+                                <button class="button">
+                                    ADD TO CART
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+            <div class="columns footer">
+                <div class="column is-3">
+                    <h3>
+                        TOP CATEGORIES
+                    </h3>
+                    <h6>
+                        WOMEN
+                    </h6>
+                    <h6>
+                        MEN
+                    </h6>
+                    <h6>
+                        JUNIOR
+                    </h6>
+                    <h6>
+                        ACCESSORIES
+                    </h6>
+                </div>
+                <div class="column is-3">
+                    <h3>
+                        CUSTOMER SERVICE
+                    </h3>
+                    <h6>
+                        RETURNS
+                    </h6>
+                    <h6>
+                        SHIPPING
+                    </h6>
+                    <h6>
+                        ABOUT US
+                    </h6>
+                    <h6>
+                        CONTACT US
+                    </h6>
+                </div>
+                <div class="column is-6">
+                    <h3>
+                        NEWSLETTER SUBSCRIBE
+                    </h3>
+                    <p class="control">
+                        <input class="input" type="text" placeholder="Enter your email address">
+                    </p>
                 </div>
             </div>
         </div>
