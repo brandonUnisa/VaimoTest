@@ -32,8 +32,8 @@
                     <img src="img/Logo_Transparent.png" class="logo" alt="Vaimo Store">
                 </div>
                 <div class="column is-6 align-right">
-                    <popover :width="300" trigger="click">
-                        <button class="button">
+                    <popover :width="300" trigger="hover">
+                        <button class="button shopping-cart-button">
                             <span class="no-left-margin icon">
                                 <i class="fa fa-shopping-cart"></i>
                             </span>
@@ -394,7 +394,7 @@
                     <div class="column is-3-desktop">
                         <div>
                             <img src="<?php echo e($product['image']); ?>" class="grey-border" alt="<?php echo e($product['title']); ?>">
-                            <h5 class="uppercase align-center">
+                            <h5 class="uppercase align-center product-title">
                                 <?php echo e($product['title']); ?>
 
                             </h5>
@@ -419,7 +419,7 @@
                                 </div>
                             <?php endif; ?>
                             <div class="align-center">
-                                <button class="button">
+                                <button class="button vaimo-button">
                                     ADD TO CART
                                 </button>
                             </div>
@@ -466,9 +466,11 @@
                     <h3>
                         NEWSLETTER SUBSCRIBE
                     </h3>
-                    <p class="control">
-                        <input class="input" type="text" placeholder="Enter your email address">
-                    </p>
+                    <i class="fa fa-envelope-o"></i>
+                    <input class="input w-80" type="text" placeholder="Enter your email address">
+                    <button class="button vaimo-button">
+                        SUBSCRIBE
+                    </button>
                 </div>
             </div>
         </div>
