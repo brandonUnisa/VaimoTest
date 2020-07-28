@@ -44,16 +44,26 @@
 }
 
 h1 {
-  font-size: 40px !important;
+  font-size: 50px !important;
+  font-weight: 600 !important;
+  line-height: 64px !important;
 }
 
 h2 {
-  font-size: 22px !important;
+  font-size: 32px !important;
+  font-weight: 600 !important;
+  line-height: 32px !important;
 }
 
 h3 {
   font-size: 16px !important;
 }
+
+h4 {
+  font-weight: 600 !important;
+  font-size: 18px !important;
+}
+
 
 .popper-dropdown {
   background-color: #edf1f2 !important;
@@ -125,8 +135,13 @@ h3 {
 
 .col-2-custom {
   display: inline-block;
+  font-weight: 500;
   padding: 0px;
   width: 49%;
+}
+
+.item-price {
+  font-weight: 500 !important;
 }
 
 .grey-border {
@@ -142,7 +157,9 @@ h3 {
 }
 
 .footer {
-  background-color: #888f93;
+  background-color: #888f93 !important;
+  padding-left: 5% !important;
+  padding-right: 5% !important;
 }
 
 .cart-image {
@@ -170,6 +187,7 @@ h3 {
 .vaimo-button {
   background-color: #41c1c4 !important;
   color: white !important;
+  line-height: 30px !important;
   border-color: #41c1c4 !important;
   font-weight: 600;
   border-radius: 4px !important;
@@ -180,7 +198,7 @@ h3 {
 }
 
 .w-80 {
-  width: 80% !important;
+  width: calc(100% - 125px) !important;
 }
 
 .columns:last-child {
@@ -189,6 +207,10 @@ h3 {
 
 .shopping-cart-button {
   border-radius: 4px !important;
+}
+
+.white {
+  color: white;
 }
 
 @media screen and (max-width: 776px) {
@@ -204,5 +226,74 @@ h3 {
   .strikethrough {
     display: none;
   }
+
+  .vaimo-button {
+    width: 100%;
+  }
+
+  .subscribe {
+    margin-top: 10px;
+  }
+
+  .w-80 {
+    width: 100% !important;
+  }
+
+  .d-none {
+    display: none !important;
+  }
+}
+
+input {
+  text-indent: 28px;
+  border-color: white !important;
+}
+
+.icon-container {
+  position: relative
+}
+
+.subscribe-icon {
+  position: absolute;
+  left: 7px;
+  top: 4px;
+}
+
+.subscribe-input {
+  padding-top: 2px;
+}
+
+.input:active {
+  border-color: #41c1c4 !important;
+}
+
+.icon {
+  color: black !important;
+}
+
+#app {
+  margin-bottom: 0px;
+}
+
+.narrow-center {
+  width: 93%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.favourites-text {
+  width: fit-content;
+  display: inline-block;
+}
+
+@media screen and (max-width: 855px) {
+  .col-2-custom {
+    width: 48% !important;
+  }
+}
+
+.favourites-heading {
+  font-size: 27px !important;
+  font-weight: 400;
 }
 

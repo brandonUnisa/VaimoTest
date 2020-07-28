@@ -27,20 +27,20 @@
             <div class="columns">
                 <div class="blue-banner-top"></div>
             </div>
-            <div class="columns">
-                <div class="column is-6">
+            <div class="columns narrow-center">
+                <div class="column is-6 is-6-mobile">
                     <img src="img/Logo_Transparent.png" class="logo" alt="Vaimo Store">
                 </div>
-                <div class="column is-6 align-right">
+                <div class="column is-6 align-right is-6-mobile">
                     <popover :width="300" trigger="hover">
                         <button class="button shopping-cart-button">
                             <span class="no-left-margin icon">
                                 <i class="fa fa-shopping-cart"></i>
                             </span>
-                            <span class="no-left-margin">
+                            <span class="no-left-margin d-none">
                                 3 items in your cart
                             </span>
-                            <span class="heavy-font">
+                            <span class="heavy-font d-none">
                                 €75.00
                             </span>
                         </button>
@@ -69,7 +69,7 @@
                     </popover>
                 </div>
             </div>
-            <div class="columns bottom-border-thick">
+            <div class="columns narrow-center bottom-border-thick">
                 <div class="column is-9">
                     <dropdown trigger="hover">
                 <a class="button nav-button">
@@ -359,7 +359,7 @@
                     </dropdown>
                 </div>
             </div>
-            <div class="columns">
+            <div class="columns narrow-center">
                 <div class="column is-6">
                     <img src="img/Hero_Banner.png" class="hero-banner" alt="Hero Banner">
                 </div>
@@ -378,18 +378,18 @@
                     </div>
                 </div>
             </div>
-            <div class="columns">
+            <div class="columns narrow-center">
                 <div class="column is-1">
                     <p class="strikethrough"></p>
                 </div>
-                <div class="column is-3">
-                    <h2>OUR FAVOURITES</h2>
+                <div class="column is-3 favourites-text">
+                    <h3 class="favourites-heading">OUR FAVOURITES</h3>
                 </div>
                 <div class="column is-8">
                     <p class="strikethrough"></p>
                 </div>
             </div>
-            <div class="columns">
+            <div class="columns narrow-center">
                 <?php foreach($products as $product): ?>
                     <div class="column is-3-desktop is-6-mobile">
                         <div>
@@ -400,7 +400,7 @@
                             </h5>
                             <?php if(strlen($product['specialPrice']) == 0): ?>
                                 <div>
-                                    <h5 class="align-center">
+                                    <h5 class="align-center item-price">
                                         € <?php echo e($product['price']); ?>
 
                                     </h5>
@@ -429,50 +429,72 @@
             </div>
             <div class="columns footer">
                 <div class="column is-3">
-                    <h3>
+                    <a>
+                    <h3 class="white">
                         TOP CATEGORIES
                     </h3>
-                    <h6>
+                    </a>
+                    <a>
+                    <h6 class="white">
                         WOMEN
                     </h6>
-                    <h6>
+                    </a>
+                    <a>
+                    <h6 class="white">
                         MEN
                     </h6>
-                    <h6>
+                    </a>
+                    <a>
+                    <h6 class="white">
                         JUNIOR
                     </h6>
-                    <h6>
+                    </a>
+                    <a>
+                    <h6 class="white">
                         ACCESSORIES
                     </h6>
+                    </a>
                 </div>
                 <div class="column is-3">
-                    <h3>
+                    <a>
+                    <h3 class="white">
                         CUSTOMER SERVICE
                     </h3>
-                    <h6>
+                    </a>
+                    <a>
+                    <h6 class="white">
                         RETURNS
                     </h6>
-                    <h6>
+                    </a>
+                    <a>
+                    <h6 class="white">
                         SHIPPING
                     </h6>
-                    <h6>
+                    </a>
+                    <a>
+                    <h6 class="white">
                         ABOUT US
                     </h6>
-                    <h6>
+                    </a>
+                    <a>
+                    <h6 class="white">
                         CONTACT US
                     </h6>
+                    </a>
                 </div>
-                <div class="column is-6">
+                <div class="column is-6 white">
                     <h3>
                         NEWSLETTER SUBSCRIBE
                     </h3>
-                    <span class="icon is-medium">
-                        <i class="fa fa-envelope-o"></i>
-                    </span>
-                    <input class="input w-80" type="text" placeholder="Enter your email address">
-                    <button class="button vaimo-button">
-                        SUBSCRIBE
-                    </button>
+                    <div class="icon-container">
+                        <input class="input w-80 subscribe-input" type="text" placeholder="Enter your email address">
+                        <span class="icon subscribe-icon">
+                            <i class="fa fa-envelope-o"></i>
+                        </span>
+                        <button class="button vaimo-button subscribe">
+                            SUBSCRIBE
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
