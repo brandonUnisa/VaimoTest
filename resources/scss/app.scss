@@ -191,3 +191,18 @@ h3 {
   border-radius: 4px !important;
 }
 
+@media screen and (max-width: 776px) {
+  .col-2-custom {
+    width: 48% !important;
+  }
+
+  .is-6-mobile {
+    display: inline-block !important;
+    width: 49% !important;
+  }
+
+  .strikethrough {
+    display: none;
+  }
+}
+

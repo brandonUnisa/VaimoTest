@@ -206,10 +206,10 @@
                         </menus>
                     </div>
                 </dropdown>
-                    <dropdown trigger="hover">
-                    <a class="button nav-button">
+                    <dropdown trigger="click">
+                    <button class="button nav-button">
                         <span class="heavy-font">ACCESSORIES</span>
-                    </a>
+                    </button>
                     <div slot="content">
                         <menus>
                             <menu-item>
@@ -391,7 +391,7 @@
             </div>
             <div class="columns">
                 <?php foreach($products as $product): ?>
-                    <div class="column is-3-desktop">
+                    <div class="column is-3-desktop is-6-mobile">
                         <div>
                             <img src="<?php echo e($product['image']); ?>" class="grey-border" alt="<?php echo e($product['title']); ?>">
                             <h5 class="uppercase align-center product-title">
@@ -466,7 +466,9 @@
                     <h3>
                         NEWSLETTER SUBSCRIBE
                     </h3>
-                    <i class="fa fa-envelope-o"></i>
+                    <span class="icon is-medium">
+                        <i class="fa fa-envelope-o"></i>
+                    </span>
                     <input class="input w-80" type="text" placeholder="Enter your email address">
                     <button class="button vaimo-button">
                         SUBSCRIBE
