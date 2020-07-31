@@ -37,26 +37,29 @@
                             <span class="no-left-margin icon">
                                 <i class="fa fa-shopping-cart"></i>
                             </span>
-                            @if($cart)
+                            <?php if($cart): ?>
                             <span class="no-left-margin d-none">
-                                {{$cart->totalItems}} items in your cart
+                                <?php echo e($cart->totalItems); ?> items in your cart
                             </span>
                             <span class="heavy-font d-none">
-                                € {{$cart->totalPrice}}
+                                € <?php echo e($cart->totalPrice); ?>
+
                             </span>
-                            @endif
+                            <?php endif; ?>
                         </button>
                         <div slot="content">
-                            @foreach($cart->items as $item)
+                            <?php foreach($cart->items as $item): ?>
                                 <div class="columns">
-                                    <img class="cart-image" src="{{$item->imgSrc}}" alt="{{$item->name}}">
+                                    <img class="cart-image" src="<?php echo e($item->imgSrc); ?>" alt="<?php echo e($item->name); ?>">
                                     <div class="w-100">
                                         <div class="inline-container item-details">
                                             <div>
-                                                {{$item->name}}
+                                                <?php echo e($item->name); ?>
+
                                             </div>
                                             <div>
-                                                {{$item->qty}} x € {{$item->price}}
+                                                <?php echo e($item->qty); ?> x € <?php echo e($item->price); ?>
+
                                             </div>
                                         </div>
                                         <div class="inline-container">
@@ -64,7 +67,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            @endforeach
+                            <?php endforeach; ?>
                         </div>
                     </popover>
                 </div>
@@ -390,30 +393,34 @@
                 </div>
             </div>
             <div class="columns narrow-center">
-                @foreach($products as $product)
+                <?php foreach($products as $product): ?>
                     <div class="column is-3-desktop is-6-mobile">
                         <div>
-                            <img src="{{$product['image']}}" class="grey-border" alt="{{$product['title']}}">
+                            <img src="<?php echo e($product['image']); ?>" class="grey-border" alt="<?php echo e($product['title']); ?>">
                             <h5 class="uppercase align-center product-title">
-                                {{$product['title']}}
+                                <?php echo e($product['title']); ?>
+
                             </h5>
-                            @if (strlen($product['specialPrice']) == 0)
+                            <?php if(strlen($product['specialPrice']) == 0): ?>
                                 <div>
                                     <h5 class="align-center item-price">
-                                        € {{$product['price']}}
+                                        € <?php echo e($product['price']); ?>
+
                                     </h5>
                                 </div>
-                            @endif
-                            @if (strlen($product['specialPrice']) != 0)
+                            <?php endif; ?>
+                            <?php if(strlen($product['specialPrice']) != 0): ?>
                                 <div>
                                     <h5 class="align-right col-2-custom strikethrough-text">
-                                        € {{$product['price']}}
+                                        € <?php echo e($product['price']); ?>
+
                                     </h5>
                                     <h5 class="align-left col-2-custom red-color">
-                                        € {{$product['specialPrice']}}
+                                        € <?php echo e($product['specialPrice']); ?>
+
                                     </h5>
                                 </div>
-                            @endif
+                            <?php endif; ?>
                             <div class="align-center">
                                 <button class="button vaimo-button">
                                     ADD TO CART
@@ -421,7 +428,7 @@
                             </div>
                         </div>
                     </div>
-                @endforeach
+                <?php endforeach; ?>
             </div>
             <div class="columns footer">
                 <div class="column is-3">
