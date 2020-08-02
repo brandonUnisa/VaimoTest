@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.4.4",
+    "jquery": "^3.5.1",
     "vue-blu": "^0.1.9"
   }
 }

@@ -6,6 +6,7 @@
 
 .logo {
   height: 50px;
+  min-width: 196px;
 }
 
 .shopping-cart-container {
@@ -214,6 +215,38 @@ h4 {
 }
 
 @media screen and (max-width: 776px) {
+  .bottom-border-thick {
+    display: none !important;
+  }
+
+  .w-100 {
+    display: inline-block !important;
+    width: 75% !important;
+  }
+
+  h6 {
+    font-size: 18px !important;
+  }
+
+  h3 {
+    font-size: 21px !important;
+  }
+
+  .cart-image {
+    margin-bottom: -13px !important;
+  }
+
+  .shopping-cart-button {
+    width: 50px !important;
+    height: 40px !important;
+    margin-top: -31px !important;
+  }
+
+  .favourites-text {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
   .col-2-custom {
     width: 48% !important;
   }
@@ -229,6 +262,10 @@ h4 {
 
   .vaimo-button {
     width: 100%;
+  }
+
+  .vaimo-button-large-text {
+    font-size: 20px !important;
   }
 
   .subscribe {
@@ -295,5 +332,18 @@ input {
 .favourites-heading {
   font-size: 27px !important;
   font-weight: 400;
+}
+
+#status {
+  padding-top: 15px;
+  padding-left: 10px;
+}
+
+.green {
+  color: green !important;
+}
+
+.red {
+  color: red;
 }
 

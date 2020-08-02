@@ -39,11 +39,10 @@
                             </span>
                             <?php if($cart): ?>
                             <span class="no-left-margin d-none">
-                                <?php echo e($cart->totalItems); ?> items in your cart
+                                <span id="cartNum"></span> <span id="itemsText"></span> in your cart
                             </span>
                             <span class="heavy-font d-none">
-                                € <?php echo e($cart->totalPrice); ?>
-
+                                € <span id="cartTotal"></span>
                             </span>
                             <?php endif; ?>
                         </button>
@@ -75,9 +74,9 @@
             <div class="columns narrow-center bottom-border-thick">
                 <div class="column is-9">
                     <dropdown trigger="hover">
-                <a class="button nav-button">
+                <button class="button nav-button">
                     <span class="heavy-font">WOMEN</span>
-                </a>
+                </button>
                 <div slot="content">
                     <menus>
                         <menu-item>
@@ -422,7 +421,7 @@
                                 </div>
                             <?php endif; ?>
                             <div class="align-center">
-                                <button class="button vaimo-button">
+                                <button class="button vaimo-button" @click="checkEmail">
                                     ADD TO CART
                                 </button>
                             </div>
@@ -490,13 +489,14 @@
                         NEWSLETTER SUBSCRIBE
                     </h3>
                     <div class="icon-container">
-                        <input class="input w-80 subscribe-input" type="text" placeholder="Enter your email address">
+                        <input id="email" class="input w-80 subscribe-input" type="text" placeholder="Enter your email address">
                         <span class="icon subscribe-icon">
                             <i class="fa fa-envelope-o"></i>
                         </span>
-                        <button class="button vaimo-button subscribe">
+                        <button id="buttonSend" class="button vaimo-button subscribe vaimo-button-large-text" @click="checkEmail()">
                             SUBSCRIBE
                         </button>
+                        <div id="status"></div>
                     </div>
                 </div>
             </div>
