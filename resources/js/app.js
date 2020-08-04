@@ -1,11 +1,13 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import VueBlu from 'vue-blu';
+import { Slide } from 'vue-burger-menu'
 import 'vue-blu/dist/css/vue-blu.min.css';
 import $ from 'jquery'
 
 Vue.use(VueRouter);
 Vue.use(VueBlu);
+Vue.use(Slide);
 
 const router = new VueRouter({
     mode: 'history',
@@ -26,6 +28,8 @@ new Vue({
             $("#cartNum").text(res.totalItems);
             if(res.totalItems == 1) {
                 $("#itemsText").text("item");
+            } else {
+                $("#itemsText").text("items");
             }
             $("#cartTotal").text(res.totalPrice);
         }
@@ -48,5 +52,8 @@ new Vue({
                 }
             }
         }
+    },
+    components: {
+        Slide // Register your component
     }
 }).$mount('#app');

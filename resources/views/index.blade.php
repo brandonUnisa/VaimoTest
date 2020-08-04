@@ -359,6 +359,288 @@
                     </dropdown>
                 </div>
             </div>
+            <div class="columns mobile-navbar">
+                <Slide>
+                    <div>
+                        <div class="column extra-width">
+                            <div class="menu">
+                                <menus>
+                                    <menu-item>
+                                        CATEGORIES
+                                    </menu-item>
+                                    <menu-item>
+                                        <span>WOMEN</span>
+                                        <menus slot="sub">
+                                            <menu-item>
+                                                <span>
+                                                    2014
+                                                </span>
+                                                <menus slot="sub">
+                                                    <menu-item>SUMMER</menu-item>
+                                                    <menu-item>AUTUMN</menu-item>
+                                                    <menu-item>WINTER</menu-item>
+                                                    <menu-item>SPRING</menu-item>
+                                                </menus>
+                                            </menu-item>
+                                            <menu-item>
+                                                <span>2013</span>
+                                                <menus slot="sub">
+                                                    <menu-item>SUMMER</menu-item>
+                                                    <menu-item>AUTUMN</menu-item>
+                                                    <menu-item>WINTER</menu-item>
+                                                    <menu-item>SPRING</menu-item>
+                                                </menus>
+                                            </menu-item>
+                                            <menu-item>
+                                                <span>2012</span>
+                                                <menus slot="sub">
+                                                    <menu-item>SUMMER</menu-item>
+                                                    <menu-item>AUTUMN</menu-item>
+                                                    <menu-item>WINTER</menu-item>
+                                                    <menu-item>SPRING</menu-item>
+                                                </menus>
+                                            </menu-item>
+                                            <menu-item>
+                                                <span>2011</span>
+                                                <menus slot="sub">
+                                                    <menu-item>SUMMER</menu-item>
+                                                    <menu-item>AUTUMN</menu-item>
+                                                    <menu-item>WINTER</menu-item>
+                                                    <menu-item>SPRING</menu-item>
+                                                </menus>
+                                            </menu-item>
+                                        </menus>
+                                    </menu-item>
+                                    <menu-item>
+                                        <span>MEN</span>
+                                        <menus slot="sub">
+                                            <menu-item>
+                                                <span>
+                                                    2014
+                                                </span>
+                                                <menus slot="sub">
+                                                    <menu-item>SUMMER</menu-item>
+                                                    <menu-item>AUTUMN</menu-item>
+                                                    <menu-item>WINTER</menu-item>
+                                                    <menu-item>SPRING</menu-item>
+                                                </menus>
+                                            </menu-item>
+                                            <menu-item>
+                                                <span>2013</span>
+                                                <menus slot="sub">
+                                                    <menu-item>SUMMER</menu-item>
+                                                    <menu-item>AUTUMN</menu-item>
+                                                    <menu-item>WINTER</menu-item>
+                                                    <menu-item>SPRING</menu-item>
+                                                </menus>
+                                            </menu-item>
+                                            <menu-item>
+                                                <span>2012</span>
+                                                <menus slot="sub">
+                                                    <menu-item>SUMMER</menu-item>
+                                                    <menu-item>AUTUMN</menu-item>
+                                                    <menu-item>WINTER</menu-item>
+                                                    <menu-item>SPRING</menu-item>
+                                                </menus>
+                                            </menu-item>
+                                            <menu-item>
+                                                <span>2011</span>
+                                                <menus slot="sub">
+                                                    <menu-item>SUMMER</menu-item>
+                                                    <menu-item>AUTUMN</menu-item>
+                                                    <menu-item>WINTER</menu-item>
+                                                    <menu-item>SPRING</menu-item>
+                                                </menus>
+                                            </menu-item>
+                                        </menus>
+                                    </menu-item>
+                                    <menu-item>
+                                        <span>JUNIOR</span>
+                                        <menus slot="sub">
+                                            <menu-item>
+                                                <span>
+                                                    2014
+                                                </span>
+                                                <menus slot="sub">
+                                                    <menu-item>SUMMER</menu-item>
+                                                    <menu-item>AUTUMN</menu-item>
+                                                    <menu-item>WINTER</menu-item>
+                                                    <menu-item>SPRING</menu-item>
+                                                </menus>
+                                            </menu-item>
+                                            <menu-item>
+                                                <span>2013</span>
+                                                <menus slot="sub">
+                                                    <menu-item>SUMMER</menu-item>
+                                                    <menu-item>AUTUMN</menu-item>
+                                                    <menu-item>WINTER</menu-item>
+                                                    <menu-item>SPRING</menu-item>
+                                                </menus>
+                                            </menu-item>
+                                            <menu-item>
+                                                <span>2012</span>
+                                                <menus slot="sub">
+                                                    <menu-item>SUMMER</menu-item>
+                                                    <menu-item>AUTUMN</menu-item>
+                                                    <menu-item>WINTER</menu-item>
+                                                    <menu-item>SPRING</menu-item>
+                                                </menus>
+                                            </menu-item>
+                                            <menu-item>
+                                                <span>2011</span>
+                                                <menus slot="sub">
+                                                    <menu-item>SUMMER</menu-item>
+                                                    <menu-item>AUTUMN</menu-item>
+                                                    <menu-item>WINTER</menu-item>
+                                                    <menu-item>SPRING</menu-item>
+                                                </menus>
+                                            </menu-item>
+                                        </menus>
+                                    </menu-item>
+                                    <menu-item>
+                                        <span>ACCESSORIES</span>
+                                        <menus slot="sub">
+                                            <menu-item>
+                                                <span>
+                                                    2014
+                                                </span>
+                                                <menus slot="sub">
+                                                    <menu-item>SUMMER</menu-item>
+                                                    <menu-item>AUTUMN</menu-item>
+                                                    <menu-item>WINTER</menu-item>
+                                                    <menu-item>SPRING</menu-item>
+                                                </menus>
+                                            </menu-item>
+                                            <menu-item>
+                                                <span>2013</span>
+                                                <menus slot="sub">
+                                                    <menu-item>SUMMER</menu-item>
+                                                    <menu-item>AUTUMN</menu-item>
+                                                    <menu-item>WINTER</menu-item>
+                                                    <menu-item>SPRING</menu-item>
+                                                </menus>
+                                            </menu-item>
+                                            <menu-item>
+                                                <span>2012</span>
+                                                <menus slot="sub">
+                                                    <menu-item>SUMMER</menu-item>
+                                                    <menu-item>AUTUMN</menu-item>
+                                                    <menu-item>WINTER</menu-item>
+                                                    <menu-item>SPRING</menu-item>
+                                                </menus>
+                                            </menu-item>
+                                            <menu-item>
+                                                <span>2011</span>
+                                                <menus slot="sub">
+                                                    <menu-item>SUMMER</menu-item>
+                                                    <menu-item>AUTUMN</menu-item>
+                                                    <menu-item>WINTER</menu-item>
+                                                    <menu-item>SPRING</menu-item>
+                                                </menus>
+                                            </menu-item>
+                                        </menus>
+                                    </menu-item>
+                                    <menu-item>
+                                        <span>COLLECTIONS</span>
+                                        <menus slot="sub">
+                                            <menu-item>
+                                                <span>
+                                                    2014
+                                                </span>
+                                                <menus slot="sub">
+                                                    <menu-item>SUMMER</menu-item>
+                                                    <menu-item>AUTUMN</menu-item>
+                                                    <menu-item>WINTER</menu-item>
+                                                    <menu-item>SPRING</menu-item>
+                                                </menus>
+                                            </menu-item>
+                                            <menu-item>
+                                                <span>2013</span>
+                                                <menus slot="sub">
+                                                    <menu-item>SUMMER</menu-item>
+                                                    <menu-item>AUTUMN</menu-item>
+                                                    <menu-item>WINTER</menu-item>
+                                                    <menu-item>SPRING</menu-item>
+                                                </menus>
+                                            </menu-item>
+                                            <menu-item>
+                                                <span>2012</span>
+                                                <menus slot="sub">
+                                                    <menu-item>SUMMER</menu-item>
+                                                    <menu-item>AUTUMN</menu-item>
+                                                    <menu-item>WINTER</menu-item>
+                                                    <menu-item>SPRING</menu-item>
+                                                </menus>
+                                            </menu-item>
+                                            <menu-item>
+                                                <span>2011</span>
+                                                <menus slot="sub">
+                                                    <menu-item>SUMMER</menu-item>
+                                                    <menu-item>AUTUMN</menu-item>
+                                                    <menu-item>WINTER</menu-item>
+                                                    <menu-item>SPRING</menu-item>
+                                                </menus>
+                                            </menu-item>
+                                        </menus>
+                                    </menu-item>
+                                    <menu-item>
+                                        <span>SALE</span>
+                                        <menus slot="sub">
+                                            <menu-item>
+                                                <span>
+                                                    2014
+                                                </span>
+                                                <menus slot="sub">
+                                                    <menu-item>SUMMER</menu-item>
+                                                    <menu-item>AUTUMN</menu-item>
+                                                    <menu-item>WINTER</menu-item>
+                                                    <menu-item>SPRING</menu-item>
+                                                </menus>
+                                            </menu-item>
+                                            <menu-item>
+                                                <span>2013</span>
+                                                <menus slot="sub">
+                                                    <menu-item>SUMMER</menu-item>
+                                                    <menu-item>AUTUMN</menu-item>
+                                                    <menu-item>WINTER</menu-item>
+                                                    <menu-item>SPRING</menu-item>
+                                                </menus>
+                                            </menu-item>
+                                            <menu-item>
+                                                <span>2012</span>
+                                                <menus slot="sub">
+                                                    <menu-item>SUMMER</menu-item>
+                                                    <menu-item>AUTUMN</menu-item>
+                                                    <menu-item>WINTER</menu-item>
+                                                    <menu-item>SPRING</menu-item>
+                                                </menus>
+                                            </menu-item>
+                                            <menu-item>
+                                                <span>2011</span>
+                                                <menus slot="sub">
+                                                    <menu-item>SUMMER</menu-item>
+                                                    <menu-item>AUTUMN</menu-item>
+                                                    <menu-item>WINTER</menu-item>
+                                                    <menu-item>SPRING</menu-item>
+                                                </menus>
+                                            </menu-item>
+                                        </menus>
+                                    </menu-item>
+                                    <menu-item>
+                                        <span>MY ACCOUNT</span>
+                                        <menus slot="sub">
+                                            <menu-item icon="user" to="/">Profile</menu-item>
+                                            <menu-item icon="ticket">Orders</menu-item>
+                                            <menu-item icon="lock">Settings</menu-item>
+                                            <menu-item icon="power-off">Sign out</menu-item>
+                                        </menus>
+                                    </menu-item>
+                                </menus>
+                            </div>
+                        </div>
+                    </div>
+                </Slide>
+            </div>
             <div class="columns narrow-center">
                 <div class="column is-6">
                     <img src="img/Hero_Banner.png" class="hero-banner" alt="Hero Banner">
@@ -415,7 +697,7 @@
                                 </div>
                             @endif
                             <div class="align-center">
-                                <button class="button vaimo-button" @click="checkEmail">
+                                <button class="button vaimo-button">
                                     ADD TO CART
                                 </button>
                             </div>
@@ -426,60 +708,60 @@
             <div class="columns footer">
                 <div class="column is-3">
                     <a>
-                    <h3 class="white">
+                    <h3 class="white link">
                         TOP CATEGORIES
                     </h3>
                     </a>
                     <a>
-                    <h6 class="white">
+                    <h6 class="white link">
                         WOMEN
                     </h6>
                     </a>
                     <a>
-                    <h6 class="white">
+                    <h6 class="white link">
                         MEN
                     </h6>
                     </a>
                     <a>
-                    <h6 class="white">
+                    <h6 class="white link">
                         JUNIOR
                     </h6>
                     </a>
                     <a>
-                    <h6 class="white">
+                    <h6 class="white link">
                         ACCESSORIES
                     </h6>
                     </a>
                 </div>
                 <div class="column is-3">
                     <a>
-                    <h3 class="white">
+                    <h3 class="white link">
                         CUSTOMER SERVICE
                     </h3>
                     </a>
                     <a>
-                    <h6 class="white">
+                    <h6 class="white link">
                         RETURNS
                     </h6>
                     </a>
                     <a>
-                    <h6 class="white">
+                    <h6 class="white link">
                         SHIPPING
                     </h6>
                     </a>
                     <a>
-                    <h6 class="white">
+                    <h6 class="white link">
                         ABOUT US
                     </h6>
                     </a>
                     <a>
-                    <h6 class="white">
+                    <h6 class="white link">
                         CONTACT US
                     </h6>
                     </a>
                 </div>
                 <div class="column is-6 white">
-                    <h3>
+                    <h3 class="subscribe-text">
                         NEWSLETTER SUBSCRIBE
                     </h3>
                     <div class="icon-container">
