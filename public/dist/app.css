@@ -91,7 +91,7 @@ h4 {
   min-width: 90px;
 }
 
-.popover .nav-button {
+.nav-button:hover {
   background-color: #1d2b36;
   border-top: 0px;
   border-left: 0px;
@@ -99,7 +99,7 @@ h4 {
   border-bottom: 5px solid #45cbcf !important;
 }
 
-.popover .nav-button span {
+.nav-button:hover span {
   color: white;
 }
 

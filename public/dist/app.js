@@ -349,6 +349,9 @@ var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
     mode: 'history',
     base: '/',
     routes: []
+});instance.interceptors.request.use(function (config) {
+    NProgress.start();
+    return config;
 });
 
 new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({

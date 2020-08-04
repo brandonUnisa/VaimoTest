@@ -13,7 +13,10 @@ const router = new VueRouter({
     mode: 'history',
     base: '/',
     routes: []
-});
+});instance.interceptors.request.use(config => {
+  NProgress.start()
+  return config
+})
 
 new Vue({
     router,
