@@ -28,11 +28,38 @@
                 <div class="blue-banner-top"></div>
             </div>
             <div class="columns narrow-center">
-                <div class="column is-6 is-6-mobile">
+                <div class="column is-6 is-6-mobile logo-small">
                     <img src="img/Logo_Transparent.png" class="logo" alt="Vaimo Store">
                 </div>
                 <div class="column is-6 align-right is-6-mobile">
-                    <popover :width="300" trigger="hover">
+                    <popover class="popover-mobile" :width="300" trigger="click">
+                        <button class="button shopping-cart-button">
+                            <span class="no-left-margin icon">
+                                <i class="fa fa-shopping-cart"></i>
+                            </span>
+                        </button>
+                        <div slot="content">
+                            @foreach($cart->items as $item)
+                                <div class="columns">
+                                    <img class="cart-image" src="{{$item->imgSrc}}" alt="{{$item->name}}">
+                                    <div class="w-100">
+                                        <div class="inline-container item-details">
+                                            <div>
+                                                {{$item->name}}
+                                            </div>
+                                            <div>
+                                                {{$item->qty}} x € {{$item->price}}
+                                            </div>
+                                        </div>
+                                        <div class="inline-container">
+                                            <i class="fa fa-times"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </popover>
+                    <popover class="popover-desktop" :width="300" trigger="hover">
                         <button class="button shopping-cart-button">
                             <span class="no-left-margin icon">
                                 <i class="fa fa-shopping-cart"></i>
@@ -206,7 +233,7 @@
                         </menus>
                     </div>
                 </dropdown>
-                    <dropdown trigger="click">
+                    <dropdown trigger="hover">
                     <button class="button nav-button">
                         <span class="heavy-font">ACCESSORIES</span>
                     </button>

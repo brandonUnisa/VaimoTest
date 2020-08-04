@@ -13,11 +13,7 @@ const router = new VueRouter({
     mode: 'history',
     base: '/',
     routes: []
-});instance.interceptors.request.use(config => {
-  NProgress.start()
-  return config
-})
-
+});
 new Vue({
     router,
     beforeCreate() {
@@ -27,7 +23,6 @@ new Vue({
         request.send();
         request.onload = () => {
             var res = JSON.parse(request.response);
-            console.log(res);
             $("#cartNum").text(res.totalItems);
             if(res.totalItems == 1) {
                 $("#itemsText").text("item");

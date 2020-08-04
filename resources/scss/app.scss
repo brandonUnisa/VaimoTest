@@ -5,8 +5,7 @@
 }
 
 .logo {
-  height: 50px;
-  min-width: 196px;
+  max-height: 50px;
 }
 
 .shopping-cart-container {
@@ -68,6 +67,7 @@ h4 {
 
 .popper-dropdown {
   border-color: #edf1f2 !important;
+  background-color: #edf1f2 !important;
   margin-top: 1px !important;
   border-radius: 0px !important;
 }
@@ -111,10 +111,22 @@ h4 {
 .menu-list .float {
   background-color: #edf1f2 !important;
   border-color: #edf1f2 !important;
-  margin-left: 1px;
+  margin-left: -2px;
+  margin-top: -1px;
+  min-width: 100px !important;
+}
+
+.has-children .is-open {
+  background-color: #5e676f !important;
 }
 
 .menu-list a:hover {
+  background-color: #b5c2ca !important;
+  border-color: #b5c2ca !important;
+  color: black !important;
+}
+
+.is-open {
   background-color: #b5c2ca !important;
   border-color: #b5c2ca !important;
   color: black !important;
@@ -219,6 +231,16 @@ h4 {
   .mobile-navbar {
     display: none !important;
   }
+
+  .popover-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .logo-small {
+    vertical-align: text-top !important;
+  }
 }
 
 @media screen and (max-width: 776px) {
@@ -226,8 +248,17 @@ h4 {
     display: none !important;
   }
 
+  .popover-desktop {
+    display: none !important;
+  }
+
   .shopping-cart-button {
     background-color: #edf1f2 !important;
+    position: absolute !important;
+    right: 100px !important;
+    top: 30px !important;
+    width: 50px !important;
+    height: 40px !important;
   }
 
   .bm-burger-button {
@@ -279,13 +310,6 @@ h4 {
 
   .cart-image {
     margin-bottom: -13px !important;
-  }
-
-  .shopping-cart-button {
-    width: 50px !important;
-    height: 40px !important;
-    margin-top: -31px !important;
-    margin-right: 50px !important;
   }
 
   .favourites-text {
