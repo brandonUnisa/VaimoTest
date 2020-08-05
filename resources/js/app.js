@@ -17,7 +17,7 @@ const router = new VueRouter({
 new Vue({
     router,
     beforeCreate() {
-        const endpoint = "http://localhost:8000/cart/get"
+        const endpoint = "https://vaimotest.osc-fr1.scalingo.io/cart/get"
 
         const key = "cartData";
 
@@ -76,7 +76,7 @@ new Vue({
             $("#status").append('<div class="circle-border m-t-20"><div class="circle-core"></div></div></div><p class="verify loading"> Subscribing to news letter...</p>')
             let params = "?email=" + $('#email').val();;
             let request = new XMLHttpRequest();
-            request.open("GET", "http://localhost:8000/newsletter/subscribe" + params);
+            request.open("GET", "https://vaimotest.osc-fr1.scalingo.io/newsletter/subscribe" + params);
             request.send();
             request.onload = () => {
                 console.log(JSON.parse(request.response));
