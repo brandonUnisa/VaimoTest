@@ -17,20 +17,58 @@ const router = new VueRouter({
 new Vue({
     router,
     beforeCreate() {
-        let request = new XMLHttpRequest();
-        request.open("GET", "http://localhost:8000/cart/get");
-        request.setRequestHeader('Cache-Control', '3600');
-        request.send();
-        request.onload = () => {
-            var res = JSON.parse(request.response);
-            $("#cartNum").text(res.totalItems);
-            if(res.totalItems == 1) {
+        const endpoint = "http://localhost:8000/cart/get"
+
+        const key = "cartData";
+
+        // First check if there's data in SessionStorage
+        let data = sessionStorage.getItem(key);
+
+        if(data){
+            // If there's somethin in the sessionStorage with our key, return that data:
+            const finishTime = localStorage.getItem('cartTime');
+            const timeLeft = (finishTime - new Date());
+            if ((timeLeft/1000) < 0) {
+                data = fetch(endpoint).then(r => r.json());
+                data.then((result) => {
+                    console.log(result);
+                    $("#cartNum").text(result.totalItems);
+                    if(result.totalItems == 1) {
+                        $("#itemsText").text("item");
+                    } else {
+                        $("#itemsText").text("items");
+                    }
+                    $("#cartTotal").text(result.totalPrice);
+                    sessionStorage.setItem(key, JSON.stringify(result));
+                    localStorage.setItem('cartTime', ((new Date()).getTime() + 60 * 1000));
+                });
+            } else {
+                const res = JSON.parse(data);
+                $("#cartNum").text(res.totalItems);
+                if(res.totalItems == 1) {
+                    $("#itemsText").text("item");
+                } else {
+                    $("#itemsText").text("items");
+                }
+                $("#cartTotal").text(res.totalPrice);
+                return JSON.parse(data);
+            }
+        }
+
+        //If there's nothing in the storage, make the AJAX request:
+        data = fetch(endpoint).then(r => r.json());
+        data.then((result) => {
+            console.log(result);
+            $("#cartNum").text(result.totalItems);
+            if(result.totalItems == 1) {
                 $("#itemsText").text("item");
             } else {
                 $("#itemsText").text("items");
             }
-            $("#cartTotal").text(res.totalPrice);
-        }
+            $("#cartTotal").text(result.totalPrice);
+            sessionStorage.setItem(key, JSON.stringify(result));
+            localStorage.setItem('cartTime', ((new Date()).getTime() + 60 * 1000));
+        });
     },
     methods: {
         checkEmail: function() {
