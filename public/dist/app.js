@@ -151,7 +151,7 @@ var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
 new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
     router: router,
     mounted: function mounted() {
-        var endpoint = "http://localhost:8000/cart/get";
+        var endpoint = "https://vaimotest.osc-fr1.scalingo.io/cart/get";
 
         var key = "cartData";
 
