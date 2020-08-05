@@ -16,8 +16,8 @@ const router = new VueRouter({
 });
 new Vue({
     router,
-    beforeMount() {
-        const endpoint = "https://vaimotest.osc-fr1.scalingo.io/cart/get"
+    mounted() {
+        const endpoint = "http://localhost:8000/cart/get"
 
         const key = "cartData";
 

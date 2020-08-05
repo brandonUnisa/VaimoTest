@@ -20,7 +20,7 @@
             #app{
                 display: none;
             }
-            #loading{
+            #loader{
                 display: block;
             }
         </style>
@@ -28,7 +28,7 @@
             function loadingScreen()
             {
                 document.getElementById("app").style.display = "block";
-                document.getElementById("loading").style.display = "none";
+                document.getElementById("loader").style.display = "none";
             }
         </script>
         <meta charset="utf-8">
@@ -819,8 +819,13 @@
                 </div>
             </div>
         </div>
-        <div id="loading">
-            Loading...
+        <div id="loader">
+            <div class="wrap">
+                <div class="loading">
+                    <div class="bounceball"></div>
+                    <div class="text">NOW LOADING</div>
+                </div>
+            </div>
         </div>
         <script src="dist/app.js"></script>
     </body>
