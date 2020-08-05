@@ -16,7 +16,7 @@ const router = new VueRouter({
 });
 new Vue({
     router,
-    beforeCreate() {
+    beforeMount() {
         const endpoint = "https://vaimotest.osc-fr1.scalingo.io/cart/get"
 
         const key = "cartData";
@@ -87,7 +87,7 @@ new Vue({
                     $("#status").append('<p class="verify red m-t-20"><i class="fa fa-exclamation-triangle" style="font-size:19px; margin-right: 5px;"></i> Email verification failed...</p>');
                 }
             }
-        }
+        },
     },
     components: {
         Slide // Register your component

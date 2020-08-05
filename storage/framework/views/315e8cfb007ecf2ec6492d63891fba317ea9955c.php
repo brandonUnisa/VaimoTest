@@ -16,13 +16,28 @@
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
+        <style>
+            #app{
+                display: none;
+            }
+            #loading{
+                display: block;
+            }
+        </style>
+        <script>
+            function loadingScreen()
+            {
+                document.getElementById("app").style.display = "block";
+                document.getElementById("loading").style.display = "none";
+            }
+        </script>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>VAIMO STORE</title>
         <link rel="stylesheet" href="dist/app.css" />
     </head>
-    <body>
+    <body onload="loadingScreen()">
         <div id="app">
             <div class="columns">
                 <div class="blue-banner-top"></div>
@@ -811,6 +826,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div id="loading">
+            Loading...
         </div>
         <script src="dist/app.js"></script>
     </body>
