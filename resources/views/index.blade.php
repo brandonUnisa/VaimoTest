@@ -88,25 +88,7 @@
                             </span>
                             @endif
                         </button>
-                        <div slot="content">
-                            @foreach($cart->items as $item)
-                                <div class="columns">
-                                    <img class="cart-image" src="{{$item->imgSrc}}" alt="{{$item->name}}">
-                                    <div class="w-100">
-                                        <div class="inline-container item-details">
-                                            <div>
-                                                {{$item->name}}
-                                            </div>
-                                            <div>
-                                                {{$item->qty}} x € {{$item->price}}
-                                            </div>
-                                        </div>
-                                        <div class="inline-container">
-                                            <i class="fa fa-times"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
+                        <div slot="content" id="shopping-cart-content">
                             <div class="columns">
                                 <button class="button vaimo-button checkout">
                                     <span class="heavy-font">GO TO CHECKOUT</span>

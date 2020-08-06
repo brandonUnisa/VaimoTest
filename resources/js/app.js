@@ -17,7 +17,7 @@ const router = new VueRouter({
 new Vue({
     router,
     mounted() {
-        const endpoint = "https://vaimotest.osc-fr1.scalingo.io/cart/get"
+        const endpoint = "http://localhost:8000/cart/get"
 
         const key = "cartData";
 
@@ -41,16 +41,53 @@ new Vue({
                     $("#cartTotal").text(result.totalPrice);
                     sessionStorage.setItem(key, JSON.stringify(result));
                     localStorage.setItem('cartTime', ((new Date()).getTime() + 60 * 1000));
+
+                    document.getElementById('shopping-cart-content').innerHTML = result.items.map(cartItem =>
+                        `<div class="columns">
+                                    <img class="cart-image" src="${cartItem.imgSrc}" alt="${cartItem.name}">
+                                    <div class="w-100">
+                                        <div class="inline-container item-details">
+                                            <div>
+                                                ${cartItem.name}
+                                            </div>
+                                            <div>
+                                                ${cartItem.qty} x € ${cartItem.price}
+                                            </div>
+                                        </div>
+                                        <div class="inline-container">
+                                            <i class="fa fa-times"></i>
+                                        </div>
+                                    </div>
+                                </div>`
+                    ).join('');
                 });
             } else {
-                const res = JSON.parse(data);
-                $("#cartNum").text(res.totalItems);
-                if(res.totalItems == 1) {
+                const result = JSON.parse(data);
+                $("#cartNum").text(result.totalItems);
+                if(result.totalItems == 1) {
                     $("#itemsText").text("item");
                 } else {
                     $("#itemsText").text("items");
                 }
-                $("#cartTotal").text(res.totalPrice);
+                $("#cartTotal").text(result.totalPrice);
+                document.getElementById('shopping-cart-content').innerHTML = result.items.map(cartItem =>
+                    `<div class="columns">
+                                    <img class="cart-image" src="${cartItem.imgSrc}" alt="${cartItem.name}">
+                                    <div class="w-100">
+                                        <div class="inline-container item-details">
+                                            <div>
+                                                ${cartItem.name}
+                                            </div>
+                                            <div>
+                                                ${cartItem.qty} x € ${cartItem.price}
+                                            </div>
+                                        </div>
+                                        <div class="inline-container">
+                                            <i class="fa fa-times"></i>
+                                        </div>
+                                    </div>
+                                </div>`
+                ).join('');
                 return JSON.parse(data);
             }
         }
@@ -68,6 +105,25 @@ new Vue({
             $("#cartTotal").text(result.totalPrice);
             sessionStorage.setItem(key, JSON.stringify(result));
             localStorage.setItem('cartTime', ((new Date()).getTime() + 60 * 1000));
+
+            document.getElementById('shopping-cart-content').innerHTML = result.items.map(cartItem =>
+                `<div class="columns">
+                                    <img class="cart-image" src="${cartItem.imgSrc}" alt="${cartItem.name}">
+                                    <div class="w-100">
+                                        <div class="inline-container item-details">
+                                            <div>
+                                                ${cartItem.name}
+                                            </div>
+                                            <div>
+                                                ${cartItem.qty} x € ${cartItem.price}
+                                            </div>
+                                        </div>
+                                        <div class="inline-container">
+                                            <i class="fa fa-times"></i>
+                                        </div>
+                                    </div>
+                                </div>`
+            ).join('');
         });
     },
     methods: {
