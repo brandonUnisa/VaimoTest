@@ -88,6 +88,13 @@ new Vue({
                                     </div>
                                 </div>`
                 ).join('');
+                document.getElementById('shopping-cart-content').innerHTML += `
+                                        <div class="columns">
+                                <button class="button vaimo-button checkout">
+                                    <span class="heavy-font">GO TO CHECKOUT</span>
+                                </button>
+                            </div>
+            `;
                 return JSON.parse(data);
             }
         }
@@ -124,6 +131,13 @@ new Vue({
                                     </div>
                                 </div>`
             ).join('');
+            document.getElementById('shopping-cart-content').innerHTML += `
+                                        <div class="columns">
+                                <button class="button vaimo-button checkout">
+                                    <span class="heavy-font">GO TO CHECKOUT</span>
+                                </button>
+                            </div>
+            `;
         });
     },
     methods: {

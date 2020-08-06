@@ -91,11 +91,6 @@
                             <?php endif; ?>
                         </button>
                         <div slot="content" id="shopping-cart-content">
-                            <div class="columns">
-                                <button class="button vaimo-button checkout">
-                                    <span class="heavy-font">GO TO CHECKOUT</span>
-                                </button>
-                            </div>
                         </div>
                     </popover>
                 </div>
